@@ -263,3 +263,7 @@
         width: 100%;
         overflow: hidden;
     }
+    .none_div{
+        height: 50px;
+    }
+}
