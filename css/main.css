@@ -336,7 +336,6 @@ h3{
     top: 0%;
     left: 0%;
     transition: 0.5s;
-    
 }
 
 .layer:hover{
@@ -372,6 +371,10 @@ h3{
     padding-top: 50px;
 }
 
+.img-home-landing{
+    object-fit: cover;
+}
+
 .campus-col{
     flex-basis: 31%;
     border-radius: 10px;
@@ -382,6 +385,7 @@ h3{
     width: 100%;
     border-radius: 10px;
     transition: 0.5s;
+    object-fit: cover;
 }
 .campus-col p{
     padding: 0%;
