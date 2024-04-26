@@ -18,71 +18,129 @@
   <body>
     <section class="header">
       <nav>
-        <a href="index.html"
-          ><img src="image/cyu_logo.png" id="logo-img"
-        /></a>
-
+        <a href="index.html"><img src="image/cyu_logo.png" id="logo-img"/></a>
         <div class="nav-links" id="navLinks">
           <span class="icon" onclick="hidemenu()">&#10005;</span>
           <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="#projet_call">Nos Projets</a></li>
+            <li><a href="index.html">La licence</a></li>
             <li><a href="src/nos_cv.html">Nos CV</a></li>
+            <li><a href="#projet_call">Nos Projets</a></li>
+            <li class="signIn"><img src="/image/Add User Male.png" class="signInImg" width="25"><a href="#projet_call">S'inscrire</a></li>
+              <li class="signUp"> <a href="">Connexion</a></li>
+              <!--<li><a href="#projet_call"><img src="/image/Male User.png" class="signInImg" width="30"></a></li> -->
           </ul>
         </div>
         <span class="icon" onclick="showmenu()">&#9776;</span>
       </nav>
 
       <div class="text-box">
-        <h1>Licence Professionnelle Développement web</h1>
-        <p>
-          Bienvenue à vous,<br />sur le site de la Licence Professionnelle Developpeur Web et Mobile
-        </p>
-
-        <a
-          href="https://www.cyu.fr/formation/trouver-sa-formation/catalogue-des-formations/licence-metiers-de-linformatique-applications-web-developpeur-web-et-multimedia-applications-mobiles-1"
-          class="hero-btn"
-          >Admission</a
-        >
+        <article>
+        <h1>Licence Pro Metiers de l’informatique : Applications Mobiles / Objets Connectés</h1>
+        <div class="point">
+          <p> <img src="/image/redPoint.png" width="15"> Promo 2023 - 2024</p>
+        </div>
+     <!-- <a href="https://www.cyu.fr/formation/trouver-sa-formation/catalogue-des-formations/licence-metiers-de-linformatique-applications-web-developpeur-web-et-multimedia-applications-mobiles-1" class="hero-btn">Admission</a> -->   
+        </article>
+        <article class="sousMenu">
+          <article class="Headerbutton">
+            <button>Voir Github</button>
+            <button>Nous contacter</button>
+          </article>
+        
+          <button class="cagnotteButton">  <img src="/image/Euro Money.png" alt="">   Cagnotte</button>
+      </article>
       </div>
     </section>
 
+    
+    <section class="programmeSection">
+
+      <article class="intro">
+        <p>Le Web évolue vite, très vite. Les métiers se spécialisent et deviennent de plus en plus pointus (développeur mobile, backend,  front-end, fullstack…). <br>
+          La Licence professionnelle forme chaque année une vingtaine de développeuses et développeurs prêts à évoluer avec internet en partageant le même amour du web, de sa culture, beaucoup de curiosité et un solide socle de compétences.</p>
+      </article>
+
+      <article class="programme">
+        <div>
+          <h2>Programme</h2>
+          <br><br>
+          <p>
+            Avec un parcours alternant vie en entreprise (33 semaines) et enseignements universitaires (19 semaines), <br>cette licence professionnelle  vous formera au métier de développeur web <br> avec une spécialisation en applications mobiles/ objets connectés.
+          </p>
+          <p>
+              <ul class="timeProgram">
+                <li> 430 heures de formation en tronc commun et heures de spécialisation</li> 
+                <li> Intervenants issus du secteur du web</li>
+              </ul>
+          </p>
+          <br><br><br>
+        </div>
+        <div class="commonCore">
+          <h2>Tronc Commun</h2>
+          <button > <img src="/image/redPoint.png" width="15"> Python</button>
+          <button > <img src="/image/redPoint.png" width="15"> javascript</button>
+          <button > <img src="/image/redPoint.png" width="15"> NodeJs</button>
+          <button > <img src="/image/redPoint.png" width="15"> VueJS</button>
+          <button > <img src="/image/redPoint.png" width="15"> Symfony</button> <br><br>
+          <button > <img src="/image/redPoint.png" width="15"> ExpressJS</button>
+          <button > <img src="/image/redPoint.png" width="15"> Gestion de projet</button>
+          <h3>Nos options</h3>
+            <section class="options">
+              
+              <article>
+                Applications Mobiles <br><br>
+                <button > <img src="/image/redPoint.png" width="15"> Swift / Swift UI</button> <br> <br>
+                <button > <img src="/image/redPoint.png" width="15">  Kotlin</button>
+                <button > <img src="/image/redPoint.png" width="15"> Firebase </button> <br> <br>
+                <button > <img src="/image/redPoint.png" width="15">  Flutter / React Native</button>
+                <button > <img src="/image/redPoint.png" width="15">  Android Studio</button>
+              </article>
+              <article>
+                Objets connectés <br><br>
+                <button > <img src="/image/redPoint.png" width="15"> Arduino</button> <br> <br>
+                <button > <img src="/image/redPoint.png" width="15">  Modélisation 3D</button>
+                <button > <img src="/image/redPoint.png" width="15"> FacLab </button> <br> <br>
+                <button >  <img src="/image/redPoint.png" width="15"> C#</button>
+                <button > <img src="/image/redPoint.png" width="15"> MQTT</button><br> <br>
+                <button >  <img src="/image/redPoint.png" width="15"> Electronique</button> 
+              </article>
+            </section>
+        </div>
+      </article>
+    </section>
     <section class="projet" id="projet_call">
       <h1>Nos Projets</h1>
       <p>
         Nous sommes amenés à réaliser beaucoup de projets très passionants le
         long de l'année voici quelques exemples :
       </p>
-
+        
       <div class="row">
         <div class="projet-col">
           <h2>PHP/SYMFONY</h2>
-          <p>
-            Cette semaine, nos étudiants ont appris les bases de Symfony et ont
-            conclu en beauté avec la création d'une mini-application façon
-            "UberEats" en Symfony 🍔💡 (démonstration en vidéo).
-          </p>
+          <br><br>
           <video width="100%" controls>
             <source src="image/demo-project.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
+          <p class="projectDescription">Création d'une mini-application façon
+            "UberEats" en Symfony 🍔💡 (démonstration en vidéo). .</p>
         </div>
 
         <div class="projet-col">
           <h2>Option Objets Connectés</h2>
-          <p>
-            Pour ce qui est de l'objet connecté, c'est une option à choisir. Les étudiants accueillis au Fab Lab
-            étudient via des projets des technologies telles que Arduino. Énormément de matériel est mis à leur disposition
-            comme des imprimantes 3D, du matériel électronique et bien plus encore.
-          </p>
+          <br><br>
+            
+            <img src="/image/img2 1.png" alt="">
+          
+          <p class="projectDescription">Création d'un baby-foot connecté, avec un mini-écran intégré pour gérer les joueurs et les parties</p>
         </div>
 
         <div class="projet-col">
           <h2>Option Applications Mobiles</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-            ad.
-          </p>
+          <br><br>
+          <img src="/image/img3 1.png" alt="">
+          <p class="projectDescription">Application Mobile pour géolocaliser des utilisateurs dans la zone où l'on se situe .</p>
         </div>
       </div>
     </section>
@@ -92,31 +150,37 @@
 
       <div class="row">
         <div class="valeur-col">
-          <img src="image/partage.jpg" alt="" />
+         
+          <img src="image/together 1.png" alt="" />
           <div class="layer">
-            <h3>Entraide</h3>
+            
           </div>
+          <h3>Entraide</h3>
         </div>
 
         <div class="valeur-col">
-          <img src="image/apprentissage.jpg" alt="" />
+          
+          <img src="image/kindness 1.png" alt="" />
           <div class="layer">
-            <h3>Partage</h3>
+           
           </div>
+          <h3>Partage</h3>
         </div>
 
         <div class="valeur-col">
-          <img src="image/Test.jpg" alt="" />
+          
+          <img src="image/sleep 1.png" alt="" />
           <div class="layer">
-            <h3></h3>
+          
           </div>
+          <h3>Détente</h3>
         </div>
       </div>
     </section>
 
     <section class="campus">
       <h1>Le campus</h1>
-      <p>Installations misent en place par l'université pour les étudiants</p>
+      <p>On vous accueille sur le site universitaire de Gennevilliers </p>
 
       <div class="row">
         <div class="campus-col">
