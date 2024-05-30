@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   
 }
 
@@ -414,6 +415,233 @@ h3{
     font-weight: 600;
 } 
 
+/* code css pour la popup inscription  */
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+background: #555;
+}
+
+.blurer { z-index: 5;
+position: fixed;
+top: 0;
+left: 0;
+backdrop-filter: blur(2px);
+height: 100vh;
+width: 100vw;
+display: none;
+opacity: 0; 
+transition: opacity 0.3s ease; 
+}
+.dialog-window {
+    z-index: 10;
+    /* width: 350px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.dialog-title {
+margin-bottom: 20px; font-size: 2rem; font-weight: bold;
+}
+
+.dialog-text{
+    margin-top: 0px;
+}
+
+
+.card {
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  .card-header {
+    
+    width: 100%;
+    text-align: center;
+    display: flex;
+    
+    justify-content: space-between;
+  }
+  .card-header div {
+    width: 50%;
+    padding: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    
+  }
+  #userType1 {
+    background-color: #80ED99;
+  }
+  #userType2 {
+    background-color: #D9D9D9;
+    
+  }
+  
+  #entries {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 12px;
+   
+    
+  }
+  #stacks {
+    
+  }
+  .entry {
+    background-color: #D9D9D9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    border-radius: 50px;
+    border:1px solid black;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .deleteStackButton{
+    background-color: crimson;
+    border-radius: 50px;
+    padding: 3px;
+    color:white;
+    border:none;
+    cursor: pointer;
+  }
+  .card-header .text-header {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .text-header {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.text-header:hover {
+    color: white; 
+}
+
+.card-body {
+    display: flex; /* Make card-body a flex container */
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #f8f9fa; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  
+}
+
+  
+  .form-group {
+    flex: 1 0 auto; /* Set flexible sizing for form groups */
+    margin-bottom: 10px; /* Add some margin for better spacing */
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    display: block;
+    padding: 10px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0F172A;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+  }
+  .closeBtn {
+    
+    font-size:15px;
+    font-weight: bold;
+    margin-left: auto;
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    color:crimson;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background-color: #ccc;
+    color: #333;
+  }
+  .align {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; 
+    
+}
+
+.align .form-group {
+    flex: 1;
+}
+.password-input-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 20px; 
+}
+/* fin css popup form */
+
+
 /* Media query for responsive */
 
 @media (max-width: 700px) {
@@ -520,6 +748,27 @@ h3{
     .ctn h1{
         font-size: 24px;
     }
+    /* Default styles */
+
+  /* Styles for screens smaller than 768px */
+ 
+    .dialog-window {
+      width: 90%; /* Adjust width for smaller screens */
+      /* Add other responsive styles here */
+    }
+  
+    h2 {
+        font-size: 1.2rem; /* Reduce heading font size */
+      }
+      .form-control {
+        padding: 8px; /* Reduce input field padding */
+      }
+      .text-header {
+        width: 50%;
+      }
+.align input{
+    
+}
 }
 
 /* Media query is Close*/

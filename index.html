@@ -25,7 +25,124 @@
             <li><a href="index.html">La licence</a></li>
             <li><a href="src/nos_cv.html">Nos CV</a></li>
             <li><a href="#projet_call">Nos Projets</a></li>
-            <li class="signIn"><img src="/image/Add User Male.png" class="signInImg" width="25"><a href="#projet_call">S'inscrire</a></li>
+            <li class="signIn"><img src="/image/Add User Male.png" class="signInImg" width="25"><a  onclick="openDialog()" >S'inscrire</a></li>
+            <div class="blurer" id="blurer"></div>
+
+              <!-- popup inscription -->
+
+              <div class="blurer" id="blurer"></div>
+<span id="dialog" class="dialog-window">
+  <button class="closeBtn" onclick="closeDialog()">FERMER X</button>
+<span class="dialog-text">
+    <div class="card">
+      <div class="card-header">
+        <div id="userType1" class="text-header" onclick="showForm('student')">Je suis étudiant</div>
+        <div id="userType2" class="text-header" onclick="showForm('teacher')">Je suis prof</div>
+      </div>
+      <div class="card-body">
+        <form id="student-form" action="#">
+          <h2>Je crée mon compte étudiant</h2>
+          <div class="align">
+            <div class="form-group">
+              <label for="nom">Nom </label>
+              <input required class="form-control" name="nom" id="nom" type="text">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prenom:</label>
+              <input required class="form-control" name="prenom" id="prenom" type="text">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="github">Lien utile</label>
+              <input required class="form-control" name="github" id="github" type="text" placeholder="Portfolio, Github, Linkedin ...">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input required class="form-control" name="email" id="email" type="email">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="stacks">Stacks technique:</label>
+              <input required class="form-control" name="stacks" id="stacks" type="text">
+              <div id="error-message" style="color: crimson;"></div> <!-- Element to display error message -->
+              <div id="entries"></div>
+            </div>
+            <div class="form-group">
+              <label for="statut">Statut:</label>
+              <input required class="form-control" name="statut" id="statut" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="file">Photo de profil:</label>
+            <input required class="form-control" name="file" id="file" type="file" accept="image/png, image/jpeg">
+        </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="password">Mot de passe:</label>
+              <div class="password-input-container">
+                  <input required class="form-control" name="password" id="password" type="password">
+                  <button style="right: 0px;" type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                      <img src="image/65000.png" alt="Voir mot de passe">
+                  </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirmer mot de passe:</label>
+              <input required class="form-control" name="confirm-password" id="confirm-password" type="password">
+            </div>
+          </div>
+       
+          <input type="submit" class="btn" value="S'inscrire">
+        </form>
+
+        <form id="teacher-form" action="#">
+          <h2>Je crée mon compte professeur</h2>
+          <div class="align">
+            <div class="form-group">
+              <label for="nom">Nom:</label>
+              <input required class="form-control" name="nom" id="nom" type="text">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prenom:</label>
+              <input required class="form-control" name="prenom" id="prenom" type="text">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="fonction">Fonction:</label>
+              <input required class="form-control" name="fonction" id="fonction" type="text">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input required class="form-control" name="email" id="email" type="email">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="password">Mot de passe:</label>
+              <div class="password-input-container">
+                  <input required class="form-control" name="password" id="password" type="password">
+                  <button style="right: 0px;" type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                      <img src="image/65000.png" alt="Voir mot de passe">
+                  </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirmer mot de passe:</label>
+              <input required class="form-control" name="confirm-password" id="confirm-password" type="password">
+            </div>
+          </div>
+          <input type="submit" class="btn" value="S'inscrire">
+        </form>
+      </div>
+    </div>
+</span>
+
+</span>
+                    <!-- fin structure popup inscription -->
+
               <li class="signUp"> <a href="">Connexion</a></li>
               <!--<li><a href="#projet_call"><img src="/image/Male User.png" class="signInImg" width="30"></a></li> -->
           </ul>
@@ -33,7 +150,7 @@
         <span class="icon" onclick="showmenu()">&#9776;</span>
       </nav>
       <div class="img-home-landing">
-        <img src="image/cantine.jpg" alt="" />
+        <!-- <img src="image/cantine.jpg" alt="" /> -->
       <div class="text-box">
         <article>
         <h1>Licence Pro Metiers de l’informatique : Applications Mobiles / Objets Connectés</h1>
@@ -220,5 +337,6 @@
     </section>
 
     <script src="javascript/main.js"></script>
+    <script src="javascript/script.js"></script>
   </body>
 </html>
