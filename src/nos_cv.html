@@ -19,7 +19,7 @@
         <div class="nav-links" id="navLinks">
           <span class="icon" onclick="hidemenu()">&#10005;</span>
           <ul>
-            <li><a href="../index.html">La licence</a></li>
+            <li><a href="https://www.cyu.fr/formation/trouver-sa-formation/catalogue-des-formations/licence-metiers-de-linformatique-applications-web-developpeur-web-et-multimedia-objets-connectes" target="_blank">La licence</a></li>
             <li><a href="nos_cv.html">Nos CV</a></li>
             <li><a href="#projet_call">Nos Projets</a></li>
             <li class="signIn"><a  onclick="openDialog()" >S'inscrire</a></li>
@@ -30,7 +30,7 @@
 
               <div class="blurer" id="blurer"></div>
 <span id="dialog" class="dialog-window">
-  <button class="closeBtn" onclick="closeDialog()">FERMER X</button>
+  <button class="closeBtn" onclick="closeDialog()">&times;</button>
 <span class="dialog-text">
     <div class="card">
       <div class="card-header">
@@ -141,7 +141,42 @@
 </span>
                     <!-- fin structure popup inscription -->
 
-              <li class="signUp"> <a href="">Connexion</a></li>
+              <li class="signUp"> <a  href="#popup2">Connexion</a></li>
+
+               <!-- popup connexion -->
+                
+               <div id="popup2" class="overlaye">
+                <div class="popup2">
+                  <div class="connexionTitle"> 
+                    <img src="/image/Test Account.png" alt="" width="80px">
+
+                    <h2 class="h2title">Connexion</h2>
+                  </div>
+                 
+                  <a class="close" title="fermer" href="#">&times;</a>
+                  <div class="contents">
+                    
+                    <form class="connexionForm">
+                      <label for="username">Identifiant/email</label><br>
+                      <input type="text" id="username" name="username" placeholder="Identifiant"> <br> <br> 
+                      
+                      <label for="password">mot de passe</label><br>
+                      <input type="password" id="password" name="password" placeholder="Mot de passe"> <br>
+                      
+                      <a href="#" class="forgot-password">Mot de passe oublié ?</a><br> <br>
+                      
+                      <button class="connexionButton" type="submit">SE CONNECTER</button>
+                  </form>
+                    
+                    
+                  </div>
+                 <!-- <hr> 
+                  <p class="p-signup"> Pas encore inscrit? </p>
+                  <a> <button class="signup-now"> S'inscrire maintenant </button> </a> -->
+                </div>
+              </div>
+              <!-- fin popup connexion  -->
+
               <!--<li><a href="#projet_call"><img src="/image/Male User.png" class="signInImg" width="30"></a></li> -->
           </ul>
         </div>
@@ -159,8 +194,29 @@
         </article>
         <article class="sousMenu">
           <article class="Headerbutton">
-            <button>Voir Github</button>
-            <button>Nous contacter</button>
+            <a href="https://github.com/LPDW2024" target="_blank"> <button>Voir Github</button></a>
+            <a href="#popup1"> <button> Nous contacter</button> </a>
+
+            <!-- popup contact -->
+
+            <div id="popup1" class="overlay">
+              <div class="popup">
+                <a class="close" title="fermer" href="#">&times;</a>
+                <h2>GET IN TOUCH WITH US ! </h2>
+                <div class="content">
+                  <img src="/image/email.png" width="30px">
+                  <p>lpdwcycontact.fr</p>
+                  <img src="/image/phone-call.png" width="30px">
+                   <p>07 67 90 82 45</p> 
+                  <img src="/image/location-pin.png" width="30px">
+                  <p>2 Av. Adolphe Chauvin, 95300 Pontoise </p>
+                 <a href=""></a> <img src="/image//linkedin.png" width="30px">
+                 <p>Linkedin</p>
+                </div>
+        
+              </div>
+              
+            </div>
           </article>
         
           <button class="cagnotteButton">  <img src="../image/Euro Money.png" alt="">Cagnotte</button>
