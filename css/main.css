@@ -402,6 +402,16 @@ color: #40DCA5;
     .popup2{
       width: 80%;
     }
+    .connexionForm label {
+        color:black;
+    }
+    .connexionButton {
+        width: 90%;
+    }
+    .connexionForm input {
+       
+        width:90%;
+      }
   }
 
 /* fin style connexion popup */
