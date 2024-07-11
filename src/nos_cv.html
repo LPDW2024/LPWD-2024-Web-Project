@@ -1,52 +1,291 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nos CV</title>
-    <link
-      rel="shortcut icon"
-      href="../image/logo-modified.png"
-      type="image/svg+xml"
-    />
-    <link rel="stylesheet" href="../css/nos_cv.CSS" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+
+    <title>Licence Pro Dev Web</title>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/nos_cv.css" />  
+
+    <link rel="shortcut icon" href="../image/cyu_logo.png" type="image/svg+xml"/>
   </head>
   <body>
     <section class="header">
       <nav>
-        <a href="../index.html"
-          ><img src="../image/logo-modified.png" id="logo-img"
-        /></a>
-
+        <a href="../index.html"><img src="../image/cyu_logo.png" width="20"  id="logo-img"/></a>
         <div class="nav-links" id="navLinks">
           <span class="icon" onclick="hidemenu()">&#10005;</span>
           <ul>
-            <li><a href="../index.html">Accueil</a></li>
-            <li><a href="../index.html#projet_call">Nos projets</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="https://www.cyu.fr/formation/trouver-sa-formation/catalogue-des-formations/licence-metiers-de-linformatique-applications-web-developpeur-web-et-multimedia-objets-connectes" target="_blank">La licence</a></li>
             <li><a href="nos_cv.html">Nos CV</a></li>
+            <li><a href="#projet_call">Nos Projets</a></li>
+            <li class="signIn"><a  onclick="openDialog()" >S'inscrire</a></li>
+            <!-- <img src="../image/Add User Male.png" class="signInImg" width="25"> -->
+            <div class="blurer" id="blurer"></div>
+
+              <!-- popup inscription -->
+
+              <div class="blurer" id="blurer"></div>
+<span id="dialog" class="dialog-window">
+  <button class="closeBtn" onclick="closeDialog()">&times;</button>
+<span class="dialog-text">
+    <div class="card">
+      <div class="card-header">
+        <div id="userType1" class="text-header" onclick="showForm('student')">Je suis étudiant</div>
+        <div id="userType2" class="text-header" onclick="showForm('teacher')">Je suis prof</div>
+      </div>
+      <div class="card-body">
+        <form id="student-form" action="#">
+          <h2>Je crée mon compte étudiant</h2>
+          <div class="align">
+            <div class="form-group">
+              <label for="nom">Nom </label>
+              <input required class="form-control" name="nom" id="nom" type="text">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prenom:</label>
+              <input required class="form-control" name="prenom" id="prenom" type="text">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="github">Lien utile</label>
+              <input required class="form-control" name="github" id="github" type="text"  placeholder="Portfolio, Github, Linkedin ...">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input required class="form-control" name="email" id="email" type="email">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="stacks">Stacks technique:</label>
+              <input required class="form-control" name="stacks" id="stacks" type="text">
+              <div id="error-message" style="color: crimson;"></div> <!-- Element to display error message -->
+              <div id="entries"></div>
+            </div>
+            <div class="form-group">
+              <label for="statut">Statut:</label>
+              <input required class="form-control" name="statut" id="statut" type="text">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="file">Photo de profil:</label>
+            <input required class="form-control" name="file" id="file" type="file" accept="image/png, image/jpeg">
+        </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="password">Mot de passe:</label>
+              <div class="password-input-container">
+                  <input required class="form-control" name="password" id="password" type="password">
+                  <button style="right: 0px;" type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                      <img src="../image/65000.png" alt="Voir mot de passe">
+                  </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirmer mot de passe:</label>
+              <input required class="form-control" name="confirm-password" id="confirm-password" type="password">
+            </div>
+          </div>
+       
+          <input type="submit" class="btn" value="S'inscrire">
+        </form>
+
+        <form id="teacher-form" action="#">
+          <h2>Je crée mon compte professeur</h2>
+          <div class="align">
+            <div class="form-group">
+              <label for="nom">Nom:</label>
+              <input required class="form-control" name="nom" id="nom" type="text">
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prenom:</label>
+              <input required class="form-control" name="prenom" id="prenom" type="text">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="fonction">Fonction:</label>
+              <input required class="form-control" name="fonction" id="fonction" type="text">
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input required class="form-control" name="email" id="email" type="email">
+            </div>
+          </div>
+          <div class="align">
+            <div class="form-group">
+              <label for="password">Mot de passe:</label>
+              <div class="password-input-container">
+                  <input required class="form-control" name="password" id="password" type="password">
+                  <button style="right: 0px;" type="button" class="toggle-password" onclick="togglePasswordVisibility()">
+                      <img src="../image/65000.png" alt="Voir mot de passe">
+                  </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="confirm-password">Confirmer mot de passe:</label>
+              <input required class="form-control" name="confirm-password" id="confirm-password" type="password">
+            </div>
+          </div>
+          <input type="submit" class="btn" value="S'inscrire">
+        </form>
+      </div>
+    </div>
+</span>
+
+</span>
+                    <!-- fin structure popup inscription -->
+
+              <li class="signUp"> <a  href="#popup2">Connexion</a></li>
+
+               <!-- popup connexion -->
+                
+               <div id="popup2" class="overlaye">
+                <div class="popup2">
+                  <div class="connexionTitle"> 
+                    <img src="/image/Test Account.png" alt="" width="80px">
+
+                    <h2 class="h2title">Connexion</h2>
+                  </div>
+                 
+                  <a class="close" title="fermer" href="#">&times;</a>
+                  <div class="contents">
+                    
+                    <form class="connexionForm">
+                      <label for="username">Identifiant/email</label><br>
+                      <input type="text" id="username" name="username" placeholder="Identifiant"> <br> <br> 
+                      
+                      <label for="password">mot de passe</label><br>
+                      <input type="password" id="password" name="password" placeholder="Mot de passe"> <br>
+                      
+                      <a href="#" class="forgot-password">Mot de passe oublié ?</a><br> <br>
+                      
+                      <button class="connexionButton" type="submit">SE CONNECTER</button>
+                  </form>
+                    
+                    
+                  </div>
+                 <!-- <hr> 
+                  <p class="p-signup"> Pas encore inscrit? </p>
+                  <a> <button class="signup-now"> S'inscrire maintenant </button> </a> -->
+                </div>
+              </div>
+              <!-- fin popup connexion  -->
+
+              <!--<li><a href="#projet_call"><img src="/image/Male User.png" class="signInImg" width="30"></a></li> -->
           </ul>
         </div>
         <span class="icon" onclick="showmenu()">&#9776;</span>
       </nav>
-
-      <form>
-        <div class="wrapper">
-          <div class="r_form_wrap">
-            <div class="title">
-              <p id="header_fees">Nos CV</p>
-            </div>
-
-            <div class="r_form">
-              <form>
-                <img width="100%" src="../image/CV.png" alt="" />
-              </form>
-            </div>
-          </div>
+      <div class="img-home-landing">
+        <!-- <img src="image/cantine.jpg" alt="" /> -->
+      <div class="text-box">
+        <article>
+        <h1>Licence Pro Metiers de l’informatique : Applications Mobiles / Objets Connectés</h1>
+        <div class="point">
+          <p> <img src="../image/redPoint.png" width="15"> Promo 2023 - 2024</p>
         </div>
-      </form>
+     <!-- <a href="https://www.cyu.fr/formation/trouver-sa-formation/catalogue-des-formations/licence-metiers-de-linformatique-applications-web-developpeur-web-et-multimedia-applications-mobiles-1" class="hero-btn">Admission</a> -->   
+        </article>
+        <article class="sousMenu">
+          <article class="Headerbutton">
+            <a href="https://github.com/LPDW2024" target="_blank"> <button>Voir Github</button></a>
+            <a href="#popup1"> <button> Nous contacter</button> </a>
 
-      <div class="none_div"></div>
+            <!-- popup contact -->
+
+            <div id="popup1" class="overlay">
+              <div class="popup">
+                <a class="close" title="fermer" href="#">&times;</a>
+                <h2>GET IN TOUCH WITH US ! </h2>
+                <div class="content">
+                  <img src="/image/email.png" width="30px">
+                  <p>lpdwcycontact.fr</p>
+                  <img src="/image/phone-call.png" width="30px">
+                   <p>07 67 90 82 45</p> 
+                  <img src="/image/location-pin.png" width="30px">
+                  <p>2 Av. Adolphe Chauvin, 95300 Pontoise </p>
+                 <a href=""></a> <img src="/image//linkedin.png" width="30px">
+                 <p>Linkedin</p>
+                </div>
+        
+              </div>
+              
+            </div>
+          </article>
+        
+          <button class="cagnotteButton">  <img src="../image/Euro Money.png" alt="">Cagnotte</button>
+      </article>
+      </div>
+      </div>
     </section>
-  </body>
+    <main>
+      <section class="cvSection">
+        <article class="filterButton">
+          <p>Filtrer</p>
+          <div class="filter">
+            <button>#javascript</button>
+            <button>#VueJs</button> <br> <br>
+            <button>#NodeJs</button>
+            <button>#Php</button> <br> <br>
+            <button>#Python</button>
+          </div>
+        </article>
+          
+        <article class="cards">
+          <div class="studentCard">
+            <div class="studentInfo">
+              <h2 class="studentName"> John <span>DOE</span></h2>
+              <img src="../image/Male User.png" title="Photo de profil etudiant cyu-licence-professionnelle-developpement-web-mobile-iot" alt="Photo de profil etudiant cyu-licence-professionnelle-developpement-web-mobile-iot">
+            </div>
+           <div class="profilDetails">
+            
+           <p> <a href="" target="_blank"> >> www.portfolio.com</a></p> 
+           
+            <button> <img src="../image/redPoint.png" width="15" alt="">VueJs</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">NodeJs</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">MySql</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">Python</button>
+           </div>
+          </div>
+
+          <div class="studentCard">
+            <div class="studentInfo">
+              <h2 class="studentName"> John <span>DOE</span></h2>
+              <img src="../image/Male User.png" alt="Photo de profil etudiant cyu-licence-professionnelle-developpement-web-mobile-iot">
+            </div>
+           <div class="profilDetails">
+            
+           <p> <a href="" target="_blank"> >> www.portfolio.com</a></p> 
+           
+            <button> <img src="../image/redPoint.png" width="15" alt="">VueJs</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">NodeJs</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">MySql</button>
+            <button> <img src="../image/redPoint.png" width="15" alt="">Python</button>
+           </div>
+          </div>
+
+        </article>
+
+      </section>
+    </main>
+
+    <section class="footer">
+      <h4>Merci à vous </h4>
+      <p>
+        En espérant vous retrouver parmi nous &#10084; en attendant vous pouvez visiter notre  <a href="https://www.linkedin.com/company/cyu-licence-professionnelle-developpement-web-mobile-iot/">Linkedin</a>.
+      </p>
+      <p id="copyright">Fait par La Licence LP DW</p>
+    </section>
+
+    </body>
+    <script src="../javascript/main.js"></script>
+    <script src="../javascript/script.js"></script>
+    
 </html>

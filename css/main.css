@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
   
 }
 
@@ -158,6 +159,7 @@ color: #40DCA5;
 }
   .Headerbutton button {
     padding: 10px;
+    cursor: pointer;
     border-radius: 10px;
     width: 170px;
     font-weight: bold;
@@ -180,6 +182,240 @@ color: #40DCA5;
     background-color: #40DCA5;
     
 }
+
+
+.box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .content {
+    /* background-color: #B0CFFF; */
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50px;
+  }
+
+ 
+  
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup h2 {
+    
+    color: #333;
+    text-align: center;
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+/* fin css popup contact */
+
+
+/* style connexion popup */
+/* body {
+    font-family: Arial, sans-serif;
+    background: url(http://www.shukatsu-note.com/wp-content/uploads/2014/12/computer-564136_1280.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #06D85F;
+    margin: 80px 0;
+  } */
+  .h2title {
+    text-transform:uppercase;
+  }
+  .box2 {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .contents {
+    margin-left:auto;
+    margin-right: auto;
+    width:90%;
+  }
+  
+  .overlaye {
+    position: fixed;
+    top: 0; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlaye:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup2 {
+    margin-top: 60px;
+    margin-left:auto;
+    margin-right:auto;
+    border:1px solid black;
+    padding: 50px;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+  
+  .popup2 h2 {
+    margin-top: 0;
+    color: #333;
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup2 .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup2 .close:hover {
+    color: #06D85F;
+  }
+  .popup2 .contents {
+    max-height: 30%;
+    overflow: auto;
+  }
+  .connexionForm {
+    border:2px solid black;
+    box-shadow: 10px 5px 5px black;
+    padding:20px;
+    border-radius:50px;
+    
+    text-align: center;
+  }
+  label {
+    margin-top:10px;
+    font-weight:bold;
+    text-transform: uppercase;
+  }
+  .connexionForm input {
+    margin-top:5px;
+    padding:10px;
+    border: 1px solid black;
+    border-radius:50px;
+    width:60%;
+  }
+  .connexionButton {
+    background-color: #0F172A;
+    border-radius:10px;
+    color:white;
+    padding:10px;
+    width:35%;
+    font-weight:bold;
+  } 
+  .connexionTitle {
+    margin-bottom: 20px;
+  }
+  .connexionTitle img {
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    
+  }
+  .forgot-password {
+    text-decoration: none;
+    color:blue;
+    font-size:5px;
+  }
+  @media screen and (max-width: 700px){
+    .box2{
+      width: 70%;
+    }
+    .popup2{
+      width: 80%;
+    }
+    .connexionForm label {
+        color:black;
+    }
+    .connexionButton {
+        width: 90%;
+    }
+    .connexionForm input {
+       
+        width:90%;
+      }
+  }
+
+/* fin style connexion popup */
+
 .commonCore {
     border-radius: 30px;
     border:2px solid black;
@@ -414,6 +650,236 @@ h3{
     font-weight: 600;
 } 
 
+/* code css pour la popup inscription  */
+.btn {
+    padding: 10px 20px;
+    background: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+background: #555;
+}
+
+.blurer { z-index: 5;
+position: fixed;
+top: 0;
+left: 0;
+backdrop-filter: blur(2px);
+height: 100vh;
+width: 100vw;
+display: none;
+opacity: 0; 
+transition: opacity 0.3s ease; 
+}
+.dialog-window {
+    z-index: 10;
+    /* width: 350px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+.dialog-title {
+margin-bottom: 20px; font-size: 2rem; font-weight: bold;
+}
+
+.dialog-text{
+    margin-top: 0px;
+}
+
+
+.card {
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin: 10px;
+  }
+  
+  .card-header {
+    
+    width: 100%;
+    text-align: center;
+    display: flex;
+    
+    justify-content: space-between;
+  }
+  .card-header div {
+    width: 50%;
+    padding: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    
+  }
+  #userType1 {
+    background-color: #80ED99;
+  }
+  #userType2 {
+    background-color: #D9D9D9;
+    
+  }
+  
+  #entries {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    font-size: 12px;
+   
+    
+  }
+  #stacks {
+    
+  }
+  .entry {
+    background-color: #D9D9D9;
+    width: 100%;
+    display: flex;
+    justify-content: space-between; 
+    border-radius: 50px;
+    border:1px solid black;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  .deleteStackButton{
+    background-color: crimson;
+    border-radius: 50px;
+    padding: 3px;
+    color:white;
+    border:none;
+    cursor: pointer;
+  }
+  .card-header .text-header {
+    margin: 0;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .text-header {
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.text-header:hover {
+    color: white; 
+}
+
+.card-body {
+    display: flex; /* Make card-body a flex container */
+  flex-wrap: wrap;
+  padding: 30px;
+  background-color: #f8f9fa; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  
+}
+
+  
+  .form-group {
+    flex: 1 0 auto; /* Set flexible sizing for form groups */
+    margin-bottom: 10px; /* Add some margin for better spacing */
+    margin-bottom: 10px;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 1px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn {
+    display: block;
+    padding: 10px 24px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0F172A;
+    color: #fff;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease-in-out;
+    cursor: pointer
+  }
+  .closeBtn {
+    transition: all 200ms;
+    font-size:30px;
+    font-weight: bold;
+    margin-left: auto;
+    /* border-radius: 150px; */
+    border: none;
+    text-align: center;
+    color:crimson;
+    cursor: pointer;
+  }
+  .closeBtn:hover {
+color: #40DCA5;
+  }
+  .btn:hover {
+    background-color: #ccc;
+    color: #333;
+  }
+  .align {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px; 
+    
+}
+
+.align .form-group {
+    flex: 1;
+}
+.password-input-container {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.toggle-password img {
+  width: 20px; 
+}
+/* fin css popup form */
+
+
 /* Media query for responsive */
 
 @media (max-width: 700px) {
@@ -520,6 +986,27 @@ h3{
     .ctn h1{
         font-size: 24px;
     }
+    /* Default styles */
+
+  /* Styles for screens smaller than 768px */
+ 
+    .dialog-window {
+      width: 90%; /* Adjust width for smaller screens */
+      /* Add other responsive styles here */
+    }
+  
+    h2 {
+        font-size: 1.2rem; /* Reduce heading font size */
+      }
+      .form-control {
+        padding: 8px; /* Reduce input field padding */
+      }
+      .text-header {
+        width: 50%;
+      }
+.align input{
+    
+}
 }
 
 /* Media query is Close*/
